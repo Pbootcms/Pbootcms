@@ -1,0 +1,65 @@
+{include file=head.html}
+
+{include file=top.html}
+
+<div class="container pages">    
+
+  	 <div class="text-right position mb-4">当前位置：{pboot:position separator='>'}</div>
+  	 
+  	  <!-- 分类导航 -->
+      <div class="sonsort mb-4">
+       	{pboot:if('{sort:scode}'=='{sort:tcode}')}
+			<a href="{sort:toplink}" class="btn btn-info">全部</a>
+        {else}
+           	<a href="{sort:toplink}" class="btn btn-light">全部</a>
+        {/pboot:if}
+
+      	{pboot:nav num=10 parent={sort:tcode}}
+        	{pboot:if('[nav:scode]'=='{sort:scode}')}
+        		<a href="[nav:link]" class="btn btn-info">[nav:name]</a>
+            {else}
+            	<a href="[nav:link]" class="btn btn-light">[nav:name]</a>
+            {/pboot:if}
+        {/pboot:nav}
+     </div>
+
+	 <!-- 列表内容 -->
+     <ul>
+        {pboot:list num=10 order=date}
+            <li class="lh-3 border-bottom-dashed">
+                <i class="fa fa-gg"></i>
+                <a href="[list:link]">
+                	<span class="d-none d-md-inline">[list:title]</span>
+                	<span class="d-inline d-sm-none">[list:title len=13]</span><!-- 移动端截取 -->
+                	{pboot:if([list:istop]==1)}
+                		<span class="badge badge-danger">置顶</span>
+                	{/pboot:if}
+                	{pboot:if([list:isrecommend]==1)}
+                		<span class="badge badge-warning">推荐</span>
+                	{/pboot:if}
+                	{pboot:if([list:isheadline]==1)}
+                		<span class="badge badge-info">头条</span>
+                	{/pboot:if}
+                	<span class="float-right">[list:date style=Y-m-d]</span>
+                </a>
+            </li>
+        {/pboot:list}
+    </ul>
+
+ 	<!-- 分页 -->
+ 	{pboot:if({page:rows}>0)}
+    <nav aria-label="page navigation" class="mt-3 mb-5">
+      <div class="pagination justify-content-center">
+      	<a class="page-item page-link" href="{page:index}">首页</a>
+        <a class="page-item page-link" href="{page:pre}">上一页</a>
+        {page:numbar}<!-- 数字条，小屏幕时自动隐藏-->
+        <a class="page-item page-link" href="{page:next}">下一页</a>
+        <a class="page-item page-link" href="{page:last}">尾页</a>
+      </div>
+    </nav>	
+    {else}
+    	<div>本分类下无任何数据！</div>
+    {/pboot:if}
+</div>
+
+{include file=foot.html}

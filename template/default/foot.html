@@ -1,0 +1,58 @@
+
+<div class="footer bg-dark">
+	<div class="container">
+    	<div class="row pb-5">
+            <div class="col-12 col-md-5">
+            	<h5>{pboot:companyname}</h5>
+                <ul>
+                	<li>营业执照：{pboot:companyblicense}  </li>
+                    <li>备案号码：{pboot:siteicp} </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-5">
+            	<div class="mt-4 d-block d-md-none"></div>
+                
+            	<h5>联系我们</h5>
+                <ul>
+                	<li>地址：{pboot:companyaddress} </li>
+                    <li>电话：{pboot:companyphone} </li>
+                    <li>邮箱：{pboot:companyemail} </li>
+                    <li>Q&nbsp;&nbsp;Q：{pboot:companyqq} </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-2 text-center d-none d-md-block">
+            	{pboot:qrcode string={pboot:httpurl}{URL}} 
+                <p class="note">扫一扫手机访问</p>
+            </div>
+        </div>
+	</div>
+    <div class="copyright d-none d-md-block">
+    	{pboot:sitecopyright} {pboot:runtime}
+    </div>
+</div>
+
+<!-- 占位 -->
+<div style="height:49px;" class="d-block d-sm-none"></div>
+
+<div class="container-fluid bg-info fixed-bottom d-block d-sm-none">
+    <div class="row">
+        <div class="col-4 p-0 text-center border-right">
+            <a href="tel:{pboot:companymobile}" class="text-light d-block pt-3 pb-3"><i class="fa fa-phone" aria-hidden="true"></i> 电话咨询</a>
+        </div>
+        <div class="col-4 p-0 text-center border-right">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" class="text-light d-block pt-3 pb-3"><i class="fa fa-qq" aria-hidden="true"></i> 在线咨询</a>
+        </div>
+        <div class="col-4 p-0 text-center">
+            <a href="{pboot:siteindex}/about/1.html" class="text-light d-block pt-3 pb-3"><i class="fa fa-location-arrow" aria-hidden="true"></i> 关于我们</a>
+        </div>
+    <div>
+</div>
+
+<script src="{pboot:sitetplpath}/js/popper.min.js"></script>
+<script src="{pboot:sitetplpath}/bootstrap/js/bootstrap.min.js"></script>
+<script src="{pboot:sitetplpath}/js/aoyun.js"></script>
+
+{pboot:sitestatistical}
+
+</body>
+</html>

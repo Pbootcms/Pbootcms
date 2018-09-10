@@ -1,0 +1,38 @@
+{include file=head.html}
+
+{include file=top.html}
+
+<div class="container pages">
+
+	 <div class="text-right position mb-4">当前位置：{pboot:position separator='>'}</div>
+	 
+  	 <!-- 分类导航 -->
+      <div class="sonsort mb-4">
+       	{pboot:if('{sort:scode}'=='{sort:tcode}')}
+			<a href="{sort:toplink}" class="btn btn-info">全部</a>
+        {else}
+           	<a href="{sort:toplink}" class="btn btn-light">全部</a>
+        {/pboot:if}
+
+      	{pboot:nav num=10 parent={sort:tcode}}
+        	{pboot:if('[nav:scode]'=='{sort:scode}')}
+        		<a href="[nav:link]" class="btn btn-info">[nav:name]</a>
+            {else}
+            	<a href="[nav:link]" class="btn btn-light">[nav:name]</a>
+            {/pboot:if}
+        {/pboot:nav}
+     </div>
+     
+    <h2 class="text-center">{content:title}</h2>
+    <div class="text-center border-bottom text-secondary pb-2 mb-3">
+    	  时间：{content:date style=Y-m-d}&nbsp;&nbsp;&nbsp;访问量：{content:visits}
+    </div>
+	<div class="content mb-3">{content:content}</div>
+	<div class="text-secondary mb-5">
+		<p>上一篇：{content:precontent}</p>
+		<p>下一篇：{content:nextcontent}</p>
+	</div>
+	
+</div>
+
+{include file=foot.html}

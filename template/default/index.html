@@ -1,0 +1,119 @@
+{include file=head.html}
+
+<!-- 幻灯片 -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+    	{pboot:slide num=5 gid=1}
+        	<div class="swiper-slide">
+        		<a href="[slide:link]">
+        			<img src="[slide:src]" class="d-block w-100" >
+        		</a>
+        		<div class="container">
+			    	<div class="position-absolute text-light" style="top:20%;">
+						<h1 class="d-none d-md-block">[slide:title]</h1>
+					 	<h4 class="d-none d-md-block">[slide:subtitle]</h4>
+					 	<h4 class="d-block d-md-none">[slide:title]</h4>
+					 	<h6 class="d-block d-md-none">[slide:subtitle]</h6>
+					</div>
+			    </div>
+        	</div>
+        {/pboot:slide} 
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!--产品推荐-->
+<div class="bg-light pb-5 pt-5">
+    <div class="container">
+      <div class="title text-success">产品推荐</div>
+      <div class="subtitle text-secondary">-服务创造价值、存在造就未来-</div>
+      <div class="row">
+       {pboot:list scode=5 num=4 order=date}
+        <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card">
+                  <div class="card-img"><a href="[list:link]"><img class="card-img-top" src="[list:ico]" alt="[list:title]"></a></div>
+                  <div class="card-body">
+                    <h5 class="card-title">[list:title len=20]</h5>
+                    <p class="card-text">[list:content drophtml=1 len=50]</p>
+                    <a href="[list:link]" class="btn btn-primary mt-3">查看详情</a>
+                  </div>
+               </div>
+         </div>
+        {/pboot:list}
+      </div>
+    </div>
+</div>
+
+<!-- 关于我们 -->
+<div class="bg-white pb-5 pt-5">
+    <div class="container">
+      <div class="title text-info">关于我们</div>
+      <div class="subtitle text-secondary">-网站建设「一站式」服务商-</div>
+      {pboot:content id=1}
+      	<div class="row text-secondary mb-5 pr-3 pl-3" style="line-height:2;text-indent:30px;">
+            [content:content drophtml=1 len=300]
+      	</div>
+     	 <div class="text-center"><h4><a href="[content:link]" class="text-secondary">查看更多</a></h4></div>
+      {/pboot:content}
+    </div>
+</div>
+
+<!-- 新闻动态 -->
+<div class="bg-light  pb-5 pt-5">
+    <div class="container">
+      <div class="title text-warning">新闻动态</div>
+      <div class="subtitle text-secondary">-了解最新公司动态及行业资讯-</div>
+      <div class="row">
+      	<div class="col-12 col-lg-6 index-card-l mb-5">
+        	{pboot:list scode=2 num=1 order=date istop=1}
+        		<div class="news-img">
+                	<a href="[list:link]"><img src="[list:ico]"  width="100%" alt="[list:title]"></a>
+                </div>
+                <h5 class=" mt-3"><a href="[list:link]">[list:title len=30]</a></h5>
+                <div class="text-secondary lh-2"><a href="[list:link]">[list:content drophtml=1 len=120] 【[list:date style=Y-m-d]】</a></div>
+        	{/pboot:list}
+        </div>
+        
+        <div class="col-12 col-lg-6 index-card-r"> 
+        	{pboot:list scode=2 num=3 order=date istop=0}
+            <div class="media mb-3">
+              <a href="[list:link]"> <img class="mr-3" src="[list:ico]" width="150" alt="[list:title]"></a>
+              <div class="media-body">
+                 <h5><a href="[list:link]">[list:title len=15]</a></h5>
+                 <p><a href="[list:link]" class="text-secondary lh-2">[list:content drophtml=1 len=40]</a></p>
+                 <p>[list:date style=Y-m-d]</p>
+              </div>
+            </div>
+        	{/pboot:list}
+         </div>
+      </div>
+    </div>
+</div>
+
+
+<script src="{pboot:sitetplpath}/swiper-4.3.5/js/swiper.min.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay : {
+        delay:3500
+     },
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+      clickable :true,
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+   
+  })        
+</script>
+  
+{include file=foot.html}
+

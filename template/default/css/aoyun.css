@@ -1,0 +1,260 @@
+html {
+	font-size: 14px;
+}
+li {
+	list-style: none;
+}
+a {
+	color: #212529
+}
+p, dl, dt, dd, ul {
+	margin: 0px;
+	padding: 0px;
+}
+.lh-1{
+	line-height:1;
+}
+.lh-1.5{
+	line-height:1.5;
+}
+.lh-2{
+	line-height:2;
+}
+.lh-2.5{
+	line-height:2.5;
+}
+.lh-3{
+	line-height:3;
+}
+.lh-3.5{
+	line-height:3.5;
+}
+.lh-4{
+	line-height:4;
+}
+.border-top-dashed{
+	border-top: 1px dashed #dee2e6 !important;
+}
+.border-right-dashed{
+	border-right: 1px dashed #dee2e6 !important;
+}
+.border-bottom-dashed{
+	border-bottom: 1px dashed #dee2e6 !important;
+}
+.border-right-dashed{
+	border-top: 1px dashed #dee2e6 !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	font-size: 16px;
+}
+.navbar-brand {
+	font-size: 20px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.card, .figure {
+	margin: 15px 0;
+}
+.card-img{
+	height: 200px;
+	overflow: hidden;
+}
+.figure-img {
+	height: 200px;
+	overflow: hidden;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #dee2e6;
+	border-radius: .25rem;
+}
+.figure-img a {
+	display: block;
+	height: 188px;
+	width: 100%;
+	overflow: hidden;
+}
+.figure-img img {
+	width: 100%;
+}
+
+.title {
+	text-align: center;
+	font-size: 30px;
+	color: #37474f;
+}
+.title {
+	text-align: center;
+	font-size: 35px;
+	letter-spacing: 3px;
+	color: #fff;
+}
+.subtitle {
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: 40px;
+}
+.text-secondary a{
+	color:#6c757d;
+}
+.index-card-l .news-img {
+	overflow: hidden;
+	height:250px;
+	border: 5px solid #dee2e6;
+}
+.index-card-r .media img {
+	border: 5px solid #dee2e6;
+}
+.footer {
+	padding-top: 50px;
+	color: #7C8797;
+}
+.footer a {
+	color: #7C8797;
+}
+.footer ul {
+	line-height: 2;
+}
+.footer img {
+	height: 100px;
+}
+.footer .note {
+	font-size: 12px;
+}
+.footer .copyright {
+	text-align: center;
+	padding: 15px;
+	border-top: 1px solid #777;
+	margin-top: 20px;
+}
+.pages {
+	min-height: 500px;
+}
+.position,.position a{
+	color:#999;
+}
+.page-num:not(:disabled) {
+    cursor: pointer;
+}
+.page-num ,.page-link{
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #17a2b8;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+a.page-num:hover,.page-link:hover{
+	text-decoration:none;
+}
+.page-num-current{
+    z-index: 1;
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.page-num-current:hover{
+    color: #fff;
+}
+@media only screen and (max-width: 750px) {
+	.page-num {
+		display:none;
+	}
+}
+.content {
+	color: #666;
+	line-height: 2;
+}
+.content img, .content iframe {
+	max-width: 100% !important;
+}
+
+.view {
+	max-width:500px;
+}
+.view .swiper-slide{
+	height:300px;
+	max-width:500px;
+	padding:0 3px;
+	box-sizing:border-box;
+	overflow:hidden;
+	text-align:center;
+}
+.view .swiper-slide img{
+	height:100%;
+}
+.view .arrow-left {
+	background: url(../images/index_tab_l.png) no-repeat left center;
+	position: absolute;
+	left: 10px;
+	width: 28px;
+	height: 300px;
+	z-index: 10;
+	display:none;
+}
+
+.view .arrow-right {
+	background: url(../images/index_tab_r.png) no-repeat right center;
+	position: absolute;
+	right: 10px;
+	width: 28px;
+	height: 300px;
+	z-index: 10;
+	display:none;
+}
+
+.preview{
+	position:relative;
+	width:440px;
+	left:30px;
+}
+.preview .swiper-slide{
+	width:87.5px;
+	height:70px;
+	margin:0 3px;
+	box-sizing:border-box;
+	overflow:hidden;
+	cursor:pointer;
+}
+.preview .swiper-slide img{
+	display:inline-block;
+	height:100%;	
+}
+.preview .active-nav{
+	border: 1px solid #F00;
+}
+.preview .arrow-left {
+	background:#fff  url(../images/feel3.png) no-repeat left center;
+	position: absolute;
+	left: -20px;
+	top: 0;
+	width:20px;
+	height:70px;
+	z-index: 10;
+}
+.preview .arrow-right {
+	background:#fff  url(../images/feel4.png) no-repeat right center;
+	position: absolute;
+	right: -20px;
+	top: 0;
+	width:20px;
+	height:70px;
+	z-index: 10;
+}
+@media only screen and (max-width: 750px) {
+	.view .swiper-slide{
+		height:200px;
+	}
+	.preview{
+		display:none;
+	}
+	.view .arrow-left,.view .arrow-right {
+		height: 200px;
+		display:block;
+	}
+}
